@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interview</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="logo">AI Interview Bot</div>
+  <div class="user-info">
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    <span id="userEmail">GmailWillBeHere@gmail.com</span>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<!-- Animated Background -->
+<div class="bg-particles">
+  <svg id="dashboard-particles" width="100%" height="100%" viewBox="0 0 1000 600">
+    <circle cx="120" cy="200" r="4" fill="#7c7cff"/>
+    <circle cx="300" cy="500" r="6" fill="#b17cff"/>
+    <circle cx="600" cy="150" r="5" fill="#5eead4"/>
+    <circle cx="850" cy="400" r="4" fill="#f472b6"/>
+    <circle cx="450" cy="300" r="3" fill="#fde047"/>
+    <circle cx="720" cy="250" r="6" fill="#38bdf8"/>
+  </svg>
+</div>
+   
+
+<div class="dashboard">
+  <h2 id="progress">Question</h2>
+
+  <div class="question" id="questionBox"></div>
+
+  <textarea id="answer"
+    placeholder="Type your answer..."
+    style="width:100%; height:120px; margin-top:15px">
+  </textarea>
+
+  <!-- 🎙️ MIC BUTTON (ADD HERE) -->
+  <button class="mic-btn" onclick="startVoice()">🎙️ Speak</button>
+
+  <!-- NEXT QUESTION -->
+  <button class="start" onclick="nextQuestion()">Next Question</button>
+</div>
+
+<!-- Pehle ye tha: <script src="interview.js"></script> -->
+<!-- Ise badal kar ye karein: -->
+<script type="module" src="interview.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="bg-animation.js"></script>
+</body>
+</html>
